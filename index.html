@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Management System</title>
+
+    <!-- styles -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body id="custom-scroll-bars" class="">
+
+    <div class="nav-bar">
+        <ul class="nav">
+            <!-- <li class="nav-item">
+                <a class ="nav-link">
+                    <i class="fas fa-bars" onclick="collapseSidebar()"></i>
+                </a>
+            </li> -->
+            <li class="nav-item">
+                <div class="hamburger" id="hamburger-1" onclick="hamburgerOnclick()">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </div>
+            </li>
+            <li class="nav-item">
+                <img src="img/demologo.png" alt="logo" class="logo">
+            </li>
+            <li class="nav-item">
+                <span class="brand">DEMO</span>
+            </li>
+        </ul>
+        <form class="nav search">
+            <input type="text" name="Search" id="nav-search" placeholder="Search...">
+            <i class="fas fa-search"></i>
+        </form>
+        <ul class="nav right">
+        <li class="nav-item">
+            <a class ="nav-link">
+                <i class="fas fa-bell drpdown-toogle" data-toggle="noti-dropdown"></i>
+                <span class="notification-badge">11</span>
+            </a>
+            <ul class="dropdown" id="noti-dropdown">
+                <div class="drp-down-top">
+                    <span>Notifications</span>
+                </div>
+                <div class="drp-down-content" id="custom-scroll-bars">
+                    <li class="drp-down-content-items">
+                     <a href="#" class="drp-down-links">
+                        <i class="fas fa-bell"></i>
+                        <span> Emergency Visitor-Ambulance Emergency Visitor-Ambulance  <br>
+                             <span>8:00 AM 10/10/2020</span></span>   
+                     </a>
+                    </li>
+                    <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                            <i class="fas fa-bell"></i>
+                           <span> Emergency Visitor-Police <br>
+                                <span>10:00 AM 10/2/2020</span></span>   
+                        </a>
+                       </li>
+                       <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                           <i class="fas fa-bell"></i>
+                           <span> Visitor Request-Block D <br>
+                                <span>8:00 AM 10/10/2020</span></span>   
+                        </a>
+                       </li>
+                       <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                           <i class="fas fa-bell"></i>
+                           <span> Visitor Request-Block D <br>
+                                <span>8:00 AM 10/10/2020</span></span>   
+                        </a>
+                       </li> <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                           <i class="fas fa-bell"></i>
+                           <span> Visitor Request-Block D <br>
+                                <span>8:00 AM 10/10/2020</span></span>   
+                        </a>
+                       </li> <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                           <i class="fas fa-bell"></i>
+                           <span> Visitor Request-Block D <br>
+                                <span>8:00 AM 10/10/2020</span></span>   
+                        </a>
+                       </li> <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                           <i class="fas fa-bell"></i>
+                           <span> Visitor Request-Block D <br>
+                                <span>8:00 AM 10/10/2020</span></span>   
+                        </a>
+                       </li> <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                           <i class="fas fa-bell"></i>
+                           <span> Visitor Request-Block D <br>
+                                <span>8:00 AM 10/10/2020</span></span>   
+                        </a>
+                       </li>
+                       <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                           <i class="fas fa-bell"></i>
+                           <span> Visitor Request-Block D <br>
+                                <span>8:00 AM 10/10/2020</span></span>   
+                        </a>
+                       </li> <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                           <i class="fas fa-bell"></i>
+                           <span> Visitor Request-Block D <br>
+                                <span>8:00 AM 10/10/2020</span></span>   
+                        </a>
+                       </li> <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                           <i class="fas fa-bell"></i>
+                           <span> Visitor Request-Block D <br>
+                                <span>8:00 AM 10/10/2020</span></span>   
+                        </a>
+                       </li>
+                </div>
+                <div class="drp-down-all-notifications">
+                    <span>View all notifications</span>
+                </div>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <div class="profile">
+                <img src="img/avatar.png" alt="profile" srcset="" class="drpdown-toogle" data-toggle="profile-dropdown">
+                <ul class="dropdown profile" id="profile-dropdown">
+                       <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                            <i class="far fa-id-card"></i>
+                           <span>Profile</span>   
+                        </a>
+                       </li>
+                       <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                            <i class="fas fa-sliders-h"></i>
+                           <span>Setting</span>   
+                        </a>
+                       </li>
+                       <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links" onclick="switchTheme()">
+                            <i class="fas fa-moon"></i>
+                           <span class="theme-mode">Dark Mode</span>   
+                        </a>
+                       </li>
+                       <li class="drp-down-content-items">
+                        <a href="#" class="drp-down-links">
+                            <i class="fas fa-sign-out-alt"></i>
+                           <span>Logout</span>   
+                        </a>
+                       </li>
+                       
+                </ul>
+            </div>
+        </li>
+        </ul>
+    </div>
+   
+    <div class="sidebar">
+        <ul class="sidebar-nav">
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-links">
+                    <span><i class="fas fa-home"></i></span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-section">Management</li>
+
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-links">
+                    <span><i class="fas fa-user-friends"></i></span>
+                    <span>User</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-links">
+                    <span><i class="fas fa-car"></i></span>
+                    <span>Parking</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-links">
+                    <span><i class="fas fa-building"></i></span>
+                    <span>Property</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-section">Others</li>
+
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-links">
+                    <span><i class="far fa-envelope"></i></span>
+                    <span>Inbox</span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-links">
+                    <span><i class="fas fa-file-invoice"></i></span>
+                    <span>Customize</span>
+                </a>
+            </li>
+            <li class="sidebar-nav-item">
+                <a href="test.html" class="sidebar-nav-links">
+                    <span><i class="fas fa-chart-line"></i></span>
+                    <span>Report</span>
+                </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+                <a href="#" class="sidebar-nav-links active">
+                    <span><i class="fas fa-terminal"></i></span>
+                    <span>Terminal</span>
+                </a>
+            </li>
+
+            </ul>
+
+
+    </div>
+
+    <div class="wrapper">
+        
+        <div class="row">
+
+            <div class="col-1">
+                <div class="card card-stats">
+                    <div class="card-content card-stats">
+                   
+                        <div class="stat top-content">
+                        <h3 class="card-title">750</span>
+                        <span class="text-second-header">Daily visitors</span>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    
+   
+        </div>
+
+        <div class="row">
+
+            <div class="col-1">
+                <div class="card card-stats">
+                    <div class="card-content card-stats">
+                   
+                        <div class="stat top-content">
+                        <h3 class="card-title">2750</span>
+                        <span class="text-second-header">Weekly visitors</span>
+                    </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-4">
+                <div class="card recent-act">
+                    <div class="card-header">
+                        
+                        <span class="timeline-date">Today Date:09-08-2021</span>
+                        <h3 class="card-title">
+                            <span>Recent Activities</span>
+                            <span class="text-second-header">1270 Visitors</span>
+                        </h3>
+                         </div>
+                    <div class="card-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-label">08:42</div>                      
+                                <div class="timeline-badge">
+                                    <i class="fa fa-genderless approve icon-xxl"></i>
+                                </div>
+                                <div class="timeline-content">Outlines of the recent activities that happened last weekend</div>
+                            </div>
+                            <div class="timeline-item align-items-start">
+                                <div class="timeline-label">3 hr</div>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-genderless reject icon-xxl"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    AEOL meeting with              
+                                </div>
+                            </div>
+                            <div class="timeline-item align-items-start">
+                                <div class="timeline-label font-weight-bolder text-dark-75 font-size-lg text-right pr-3">14:37</div>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-genderless pending icon-xxl"></i>
+                                </div>
+                                <div class="timeline-content">Submit initial budget -
+                                <a href="#" class="text-primary">USD 700</a>.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">16:50</div>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-genderless reject icon-xxl"></i>
+                                </div>
+                                <div class="timeline-content">Stakeholder meeting scheduling.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">17:30</div>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-genderless approve icon-xxl"></i>
+                                </div>
+                                <div class="timeline-content">Project scoping &amp; estimations with stakeholders.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">21:03</div>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-genderless info icon-xxl"></i>
+                                </div>
+                                <div class="timeline-content">New order placed
+                                <a href="#" class="text-primary">#XF-2356</a>.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">21:07</div>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-genderless reject icon-xxl"></i>
+                                </div>
+                                <div class="timeline-content">Company BBQ to celebrate the last quater achievements and goals.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-label">20:30</div>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-genderless pending icon-xxl"></i>
+                                </div>
+                                <div class="timeline-content">Marketing campaign planning with customer.</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- scripts -->
+        <script src="https://kit.fontawesome.com/a358a361a0.js" crossorigin="anonymous"></script>
+        <script src="dashboard.js"></script>
+</body>
+</html>
